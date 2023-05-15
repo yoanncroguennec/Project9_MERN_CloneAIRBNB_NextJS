@@ -1,0 +1,97 @@
+[
+  {
+    "titleListColumn": "A propos",
+    "listColumnFooter": [
+      {
+        "title": "Comment fonctionne airbnb ?"
+      },
+      {
+        "title": "Salle de presse"
+      },
+      {
+        "title": "Investisseurs"
+      },
+      {
+        "title": "Airbnb Plus"
+      },
+      {
+        "title": "Airbnb Luxe"
+      }
+    ]
+  },
+  {
+    "titleListColumn": "Société",
+    "listColumnFooter": [
+      {
+        "title": "A propos de"
+      },
+      {
+        "title": "Carrières"
+      },
+      {
+        "title": "Presse"
+      },
+      {
+        "title": "Blog"
+      },
+      {
+        "title": "Aide"
+      },
+      {
+        "title": "Politiques"
+      },
+      {
+        "title": "Réponse aux questions"
+      },
+      {
+        "title": "Conditions d'utilisation et protection de la vie privée"
+      }
+    ]
+  },
+  {
+    "titleListColumn": "Découvrir",
+    "listColumnFooter": [
+      {
+        "title": "Confiance et sécurité"
+      },
+      {
+        "title": "Crédit de voyage"
+      },
+      {
+        "title": "Cartes Cadeaux"
+      },
+      {
+        "title": "Choix Airbnb"
+      },
+      {
+        "title": "Mobile"
+      },
+      {
+        "title": "Voyages d'affaires"
+      },
+      {
+        "title": "Plan du site"
+      }
+    ]
+  },
+  {
+    "titleListColumn": "Hébergement",
+    "listColumnFooter": [
+      {
+        "title": "Pourquoi héberger"
+      },
+      {
+        "title": "L'hospitalité"
+      },
+      {
+        "title": "Hébergement responsable"
+      },
+      {
+        "title": "Sécurisé la maison"
+      },
+      {
+        "title": "Réservation instantanée"
+      }
+    ]
+  }
+]

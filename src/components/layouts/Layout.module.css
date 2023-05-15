@@ -1,0 +1,10 @@
+/* EFFECT TRANSITION PAGES */
+.content {
+    min-height: 80vh;
+    opacity: 0;
+    transition: 1s;
+}
+
+.fadeIn {
+    opacity: 1;
+}
