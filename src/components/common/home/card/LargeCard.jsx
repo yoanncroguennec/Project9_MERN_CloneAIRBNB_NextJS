@@ -92,13 +92,13 @@ export default function LargeCard() {
 
       <BoxContentImg>
         <TypoTitle variant={matches ? "h5" : "h3"}>
-          L'extérieur le plus vert
+          L&apos;extérieur le plus vert
         </TypoTitle>
         <TypoSubTitle variant={matches ? "h6" : "h4"}>
           Liste de souhaits établie par airbnb
         </TypoSubTitle>
         <BtnLargCard onClick={RedirectionBtnBeInspired}>
-          <Typography variant='h6'>S'inspirer</Typography>
+          <Typography variant='h6'>S&apos;inspirer</Typography>
         </BtnLargCard>
       </BoxContentImg>
     </RootLargeCard>
