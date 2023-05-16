@@ -1,11 +1,7 @@
 // CONFIG DB
 import db from "../server/config/db";
 // CONTROLLERS
-import {
-  getHost,
-  putContact,
-  deleteContact,
-} from "../server/controllers/HostCtrl";
+import { getHost, putHost, deleteHost } from "../server/controllers/HostCtrl";
 
 
 export default async function handler(req, res) {
@@ -21,10 +17,10 @@ export default async function handler(req, res) {
                 getHost(req, res);
                 break;
             case 'PUT':
-                putContact(req, res);
+                putHost(req, res);
                 break;
             case 'DELETE':
-                deleteContact(req, res);
+                deleteHost(req, res);
                 break;
             default : 
                 res.setHeader('Allow', ['GET', 'POST', 'PUT', 'DELETE']);

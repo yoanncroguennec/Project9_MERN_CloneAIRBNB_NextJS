@@ -16,7 +16,7 @@ import {
   TbSortAscendingNumbers,
 } from "react-icons/tb";
 import Filters from "../../../components/common/resultsSearch/Filters";
-import PriceRange from "../PriceRange";
+// import PriceRange from "../PriceRange";
 import ComponentListResultSearch from "@/components/common/resultsSearch/ComponentListResultSearch";
 import LayoutResultsSearch from "@/components/layouts/LayoutResultsSearch";
 

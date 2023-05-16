@@ -1,5 +1,5 @@
 import React from "react";
-import PriceRange from "../../../pages/resultsSearch/PriceRange";
+// import PriceRange from "../../../pages/resultsSearch/PriceRange";
 import { Box, Typography, styled } from "@mui/material";
 // ICONS
 import {
