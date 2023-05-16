@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import { parseCookies } from "nookies";
 import cookie from "js-cookie";
-import Ticker from "react-ticker";
+// import Ticker from "react-ticker";
 import DateRangePicker from "./DateRangePicker";
 // NEXT
 import Image from "next/image";
@@ -192,7 +192,7 @@ export default function Navbar({ placeholder }) {
           <Image alt='logo airbnb' height={50} src='/airbnb.png' width={180} />
         </BoxImgLogo>
 
-        <BoxTicker>
+        {/* <BoxTicker>
           <Ticker>
             {({ index }) => (
               <TypoTitleTicker variant='h6'>
@@ -200,7 +200,7 @@ export default function Navbar({ placeholder }) {
               </TypoTitleTicker>
             )}
           </Ticker>
-        </BoxTicker>
+        </BoxTicker> */}
         <BoxToggleZoomPage_And_Geolocation_API>
           <Button onClick={toggleZoomScreen}>
             {zoomPage ? (
