@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import cookie from "js-cookie";
 import {
   Avatar,
@@ -7,7 +7,6 @@ import {
   TextField,
   Typography,
   Button,
-  styled,
 } from "@mui/material";
 import axios from "axios";
 import { toast } from "react-toastify";
@@ -44,7 +43,7 @@ export default function Login({
       cookie.set("token", data?.token);
       cookie.set("user", JSON.stringify(data?.user));
       
-      toast.success("Login Success");
+      toast.success("Connexion réussi");
 
       window.location.reload();
       setOpenModalAuth(!openModalAuth);

@@ -7,7 +7,7 @@ export default function Notfound() {
     <div>
       <Typography variant='h5'>Page Introuvable</Typography>
 
-      <Link href='/'>Retour à l'accueil</Link>
+      <Link href='/'>Retour à l&apos;accueil</Link>
     </div>
   );
 }

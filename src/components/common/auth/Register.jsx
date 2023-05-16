@@ -17,9 +17,8 @@ export default function Register({
   switchAuth,
   setSwitchAuth,
 }) {
-
   // UPLOAD IMG
-      const [imageSrc, setImageSrc] = useState();
+  const [imageSrc, setImageSrc] = useState();
 
   function handleOnChange(changeEvent) {
     const reader = new FileReader();
@@ -30,7 +29,7 @@ export default function Register({
 
     reader.readAsDataURL(changeEvent.target.files[0]);
   }
-// 
+  //
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -43,11 +42,11 @@ export default function Register({
     try {
       // console.log(email, password);
 
-            if (password !== confirmPassword) {
-              toast.error("passwords do not match!");
-              // console.log("passwords do not match")
-              return;
-            }
+      if (password !== confirmPassword) {
+        toast.error("passwords do not match!");
+        // console.log("passwords do not match")
+        return;
+      }
 
       const config = {
         headers: {
@@ -60,6 +59,8 @@ export default function Register({
         { email, password },
         config
       );
+      toast.success("Inscription réussi, Connectez-vous");
+      setSwitchAuth(!switchAuth)
     } catch (error) {
       // console.log(error.response);
       // console.log(error.response.data.error);
@@ -76,12 +77,12 @@ export default function Register({
       <Box component='form' noValidate onSubmit={SubmitHandler} sx={{ mt: 3 }}>
         <Grid>
           <Grid container spacing={2}>
-            <input type='file' name='file' onChange={handleOnChange} />
 
+            {/* <input type='file' name='file' onChange={handleOnChange} />
             {imageSrc !== undefined && (
               <Image alt='' height={450} src={imageSrc} width={450} />
             )}
-            {/*  */}
+             */}
 
             <TextField
               autoComplete='given-name'
