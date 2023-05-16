@@ -12,8 +12,8 @@ export default function Geolocation_API({ lat, long }) {
   useEffect(() => {
     geoLocation();
 
-    getDistanceBetweenTwoLocations()
-  }, []);
+    getDistanceBetweenTwoLocations();
+  }, [getDistanceBetweenTwoLocations]);
 
   const geoLocation = () => {
     if (!navigator.geolocation) {
@@ -57,7 +57,7 @@ export default function Geolocation_API({ lat, long }) {
       <Typography>Latitude : {userLatitude}</Typography>
       <Typography>Longitude : {userLongitude}</Typography> */}
       <Typography>
-        Distance entre l'hôte et vous : {distanceBetweenTwoLocations} km
+        Distance entre l&apos;hôte et vous : {distanceBetweenTwoLocations} km
       </Typography>
     </div>
   );

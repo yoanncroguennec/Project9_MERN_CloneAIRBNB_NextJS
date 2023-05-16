@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import axios from "axios";
 import { toast } from "react-toastify";
+import Image from "next/image";
 
 export default function Register({
   openModalAuth,
@@ -29,7 +30,6 @@ export default function Register({
 
     reader.readAsDataURL(changeEvent.target.files[0]);
   }
-
 // 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -71,17 +71,17 @@ export default function Register({
     <Box>
       <Avatar sx={{ m: 1, bgcolor: "secondary.main" }} />
       <Typography component='h1' variant='h5'>
-        S'Inscrire
+        S&apos;Inscrire
       </Typography>
       <Box component='form' noValidate onSubmit={SubmitHandler} sx={{ mt: 3 }}>
         <Grid>
           <Grid container spacing={2}>
-                  <input type='file' name='file' onChange={handleOnChange} />
+            <input type='file' name='file' onChange={handleOnChange} />
 
-      {imageSrc !== undefined && (
-        <Image alt='' height={450} src={imageSrc} width={450} />
-      )}
-      {/*  */}
+            {imageSrc !== undefined && (
+              <Image alt='' height={450} src={imageSrc} width={450} />
+            )}
+            {/*  */}
 
             <TextField
               autoComplete='given-name'

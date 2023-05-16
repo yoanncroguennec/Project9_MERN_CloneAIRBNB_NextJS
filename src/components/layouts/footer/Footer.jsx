@@ -21,7 +21,7 @@ export default function Footer() {
   return (
     <RootFooter>
       {dataFooter.map(({ titleListColumn, listColumnFooter }) => (
-        <ListColumnFooter>
+        <ListColumnFooter key={titleListColumn}>
           <Typography variant='h4'>{titleListColumn}</Typography>
           {listColumnFooter.map(({ title }) => (
             <Typography variant='h6' key={title}>{title}</Typography>

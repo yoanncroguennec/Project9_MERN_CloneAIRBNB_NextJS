@@ -20,15 +20,6 @@ export default function Login({
   switchAuth,
   setSwitchAuth,
 }) {
-  ////////////////////// STYLES //////////////////////
-// const RootLogin = styled(Box)(({ theme }) => ({
-//   alignItems: "center",
-//   display: "flex",
-//   flexDirection: "column",
-//   justifyContent: "center",
-//   [theme.breakpoints.down("sm")]: {},
-// }));
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -107,7 +98,7 @@ export default function Login({
         <Grid container justifyContent='flex-end'>
           <Grid item>
             <Typography onClick={() => setSwitchAuth(!switchAuth)}>
-              Pas de compte ? S'inscrire
+              Pas de compte ? S&apos;inscrire
             </Typography>
           </Grid>
         </Grid>

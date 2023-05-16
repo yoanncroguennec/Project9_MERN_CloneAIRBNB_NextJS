@@ -96,7 +96,7 @@ export default function ListCategories({ dataCategories }) {
         style={{ fontWeight: "bold" }}
         variant={matches ? "h5" : "h3"}
       >
-        Vivre n'importe où !
+        Vivre n&apos;importe où !
       </Typography>
 
       <RootListCategories>

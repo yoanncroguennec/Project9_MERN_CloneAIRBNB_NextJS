@@ -13,11 +13,11 @@ import cookie from "js-cookie";
 import DateRangePicker from "./DateRangePicker";
 // NEXT
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 // COMPONENTS
 import Auth from "@/components/common/auth/Auth";
 // FUNCTIONS
-import Geolocation_API from "../../../utils/functions/Geolocation_API";
+// import Geolocation_API from "../../../utils/functions/Geolocation_API";
 // ICONS
 import {
   AiOutlineSearch,
@@ -162,7 +162,7 @@ export default function Navbar({ placeholder }) {
 
   useEffect(() => {
     setUserState(user);
-  }, [setUserState]);
+  }, [setUserState, user]);
 
   async function logoutHandler() {
     cookie.remove("token");

@@ -3,7 +3,7 @@ import LayoutResultsSearch from "@/components/layouts/LayoutResultsSearch";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-export default function resultsSearchAllHosts() {
+export default function ResultsSearchAllHosts() {
   // States Utilies
   const [sortPrice, setSortPrice] = useState(false);
 
@@ -41,9 +41,10 @@ export default function resultsSearchAllHosts() {
       sortPrice={sortPrice}
       titlePage={titlePage}
     >
-      {searchResultsGetAllHosts?.map((destructuringOfHosts) => (
+      {searchResultsGetAllHosts?.map((destructuringOfHosts, index) => (
         <ComponentListResultSearch
           destructuringOfHosts={destructuringOfHosts}
+          key={index}
         />
       ))}
     </LayoutResultsSearch>

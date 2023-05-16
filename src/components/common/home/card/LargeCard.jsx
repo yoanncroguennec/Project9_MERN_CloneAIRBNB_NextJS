@@ -80,9 +80,10 @@ export default function LargeCard() {
     <RootLargeCard>
       <BoxImg>
         <Image
-          src='/assets/imgs/components/common/largeCard/imgLargeCard.jpg'
+          alt='largeCard'
           layout='fill'
           objectFit='cover'
+          src='/assets/imgs/components/common/largeCard/imgLargeCard.jpg'
           style={{
             borderRadius: "15px",
           }}

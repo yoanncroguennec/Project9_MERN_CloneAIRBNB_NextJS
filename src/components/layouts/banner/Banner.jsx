@@ -57,7 +57,7 @@ export default function Banner() {
   ////////////////////// RETURN //////////////////////
   return (
     <RootBanner>
-      <Image src='/assets/imgs/components/layouts/bgBanner1.jpg' layout='fill' objectFit='cover' />
+      <Image alt="banner" src='/assets/imgs/components/layouts/bgBanner1.jpg' layout='fill' objectFit='cover' />
       <BoxBanner>
         <TypoTitle variant={matches ? "h5" : "h3"}>
           Vous ne savez pas où aller ? Parfait.

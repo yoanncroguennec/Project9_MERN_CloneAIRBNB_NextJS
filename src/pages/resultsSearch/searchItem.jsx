@@ -124,10 +124,11 @@ export default function SearchItem() {
 
       {/* PHOTOS */}
       <div class='image-grid'>
-        {photos?.slice(0, 4).map((photoAccommodation) => (
+        {photos?.slice(0, 4).map((photoAccommodation, index) => (
           <Image
             alt=''
             height={450}
+            key={index}
             src={photoAccommodation}
             style={stylePhotoAccommodation}
             width={450}

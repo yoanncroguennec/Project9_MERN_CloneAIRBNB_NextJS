@@ -70,7 +70,7 @@ export default function ProposedListOfCities() {
           >
             <RootSmallCard>
               <BoxIMG>
-                <Image layout='fill' src={img} style={styleIMG} />
+                <Image alt="cityImg" layout='fill' src={img} style={styleIMG} />
               </BoxIMG>
               <div>
                 <Typography variant='h6'>{location}</Typography>

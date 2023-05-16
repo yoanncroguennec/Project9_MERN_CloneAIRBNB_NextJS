@@ -72,10 +72,11 @@ export default function ModalMoreAllPhotos({ photos }) {
             showIndicators={true}
             showThumbs={false}
           >
-            {photos?.map((photoAccommodation) => (
+            {photos?.map((photoAccommodation, index) => (
               <Image
                 alt=''
                 height={450}
+                key={index}
                 src={photoAccommodation}
                 style={stylePhotoAccommodation}
                 width={450}

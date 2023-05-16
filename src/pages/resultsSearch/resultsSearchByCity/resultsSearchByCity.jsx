@@ -132,7 +132,7 @@ export default function ResultsSearchByCity() {
   if (data?.length === 0) {
     return (
       <LayoutResultsSearch>
-        <Typography variant='h3'>Pas d'hébergements</Typography>
+        <Typography variant='h3'>Pas d&apos;hébergements</Typography>
       </LayoutResultsSearch>
     );
   }
@@ -146,9 +146,10 @@ export default function ResultsSearchByCity() {
       range={range}
     >
       {/* <button onClick={getNumberOfDays}>kkkkkkkkk</button> */}
-      {data?.map((destructuringOfHosts) => (
+      {data?.map((destructuringOfHosts, index) => (
         <ComponentListResultSearch
           destructuringOfHosts={destructuringOfHosts}
+          key={index}
         />
       ))}
     </LayoutResultsSearch>
