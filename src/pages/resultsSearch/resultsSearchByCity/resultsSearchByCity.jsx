@@ -10,13 +10,7 @@ import {
 import { format } from "date-fns";
 // NEXT
 import { useRouter } from "next/router";
-// ICONS
-import {
-  TbSortDescendingNumbers,
-  TbSortAscendingNumbers,
-} from "react-icons/tb";
 import Filters from "../../../components/common/resultsSearch/Filters";
-// import PriceRange from "../PriceRange";
 import ComponentListResultSearch from "@/components/common/resultsSearch/ComponentListResultSearch";
 import LayoutResultsSearch from "@/components/layouts/LayoutResultsSearch";
 
@@ -154,7 +148,4 @@ export default function ResultsSearchByCity() {
       ))}
     </LayoutResultsSearch>
   );
-
-  ////////////////////// RETURN //////////////////////
-  // <PriceRange value={value} setValue={setValue} />
 }

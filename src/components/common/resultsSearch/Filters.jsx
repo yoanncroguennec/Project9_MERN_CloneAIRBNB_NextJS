@@ -1,5 +1,4 @@
 import React from "react";
-// import PriceRange from "../../../pages/resultsSearch/PriceRange";
 import { Box, Typography, styled } from "@mui/material";
 // ICONS
 import {
@@ -62,7 +61,6 @@ export default function Filters({
         )}
       </BoxItemFilter>
       <BoxItemFilter>
-        {/* <PriceRange setFetchRangeValues={setFetchRangeValues} /> */}
       </BoxItemFilter>
       <BoxItemFilter
         onClick={() => {
