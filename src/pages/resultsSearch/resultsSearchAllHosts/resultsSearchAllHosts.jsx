@@ -2,7 +2,7 @@ import ComponentListResultSearch from "@/components/common/resultsSearch/Compone
 import LayoutResultsSearch from "@/components/layouts/LayoutResultsSearch";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { BaseURL_API_Local } from "@/utils/api/baseURL_API";
+import { BaseURL_API_Local, BaseURL_API_Website } from "@/utils/api/baseURL_API";
 
 export default function ResultsSearchAllHosts() {
   // States Utilies
@@ -16,7 +16,7 @@ export default function ResultsSearchAllHosts() {
     const fetchData = async () => {
       try {
         const res = await axios.get(
-          `${BaseURL_API_Local}/hosts?sort=${
+          `${BaseURL_API_Website}/hosts?sort=${
             sortPrice ? "price-desc" : "price-asc"
           }`
         );

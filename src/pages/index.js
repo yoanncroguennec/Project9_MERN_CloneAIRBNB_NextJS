@@ -17,7 +17,7 @@ import { LargeCard, ListCategories, ProposedListOfCities } from "../components/c
 // LAYOUTS
 import { Banner } from "../components/layouts";
 // UTILS BASE URL API
-import { BaseURL_API_Local } from "@/utils/api/baseURL_API";
+import { BaseURL_API_Local, BaseURL_API_Website } from "@/utils/api/baseURL_API";
 
 ////////////////////// STYLES //////////////////////
 const RootExploreNearly = styled(Box)(({ theme }) => ({
@@ -57,7 +57,7 @@ export default function Index({ searchResultsCategories }) {
 
 export async function getServerSideProps() {
   const searchResultsCategories = await fetch(
-    `${BaseURL_API_Local}/categories`
+    `${BaseURL_API_Website}/categories`
   ).then((res) => res.json());
 
   return {
