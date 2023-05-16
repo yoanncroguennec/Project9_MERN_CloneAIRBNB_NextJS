@@ -14,6 +14,7 @@ import { useRouter } from "next/router";
 import ModalMoreAllPhotos from "./ModalMoreAllPhotos";
 // ICONS
 import { AiFillStar } from "react-icons/ai";
+import { BaseURL_API_Local } from "@/utils/api/baseURL_API";
 
 ////////////////////// EXPORT FUNCTION //////////////////////
 export default function SearchItem() {
@@ -78,7 +79,7 @@ export default function SearchItem() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`http://localhost:3000/api/hosts/${_id}`);
+        const res = await axios.get(`${BaseURL_API_Local}/hosts/${_id}`);
         console.log(res.data);
         setData(res.data);
         // I set isLoading to false

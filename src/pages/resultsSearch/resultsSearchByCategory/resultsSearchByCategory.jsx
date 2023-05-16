@@ -4,6 +4,7 @@ import axios from "axios";
 import { useRouter } from "next/router";
 import ComponentListResultSearch from "@/components/common/resultsSearch/ComponentListResultSearch";
 import LayoutResultsSearch from "@/components/layouts/LayoutResultsSearch";
+import { BaseURL_API_Local } from "@/utils/api/baseURL_API";
 
 export default function ResultsSearchByCategory() {
   const router = useRouter();
@@ -20,7 +21,7 @@ export default function ResultsSearchByCategory() {
     const fetchData = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:3000/api/hosts?sort=${
+          `${BaseURL_API_Local}/hosts?sort=${
             sortPrice ? "price-desc" : "price-asc"
           }`
         );

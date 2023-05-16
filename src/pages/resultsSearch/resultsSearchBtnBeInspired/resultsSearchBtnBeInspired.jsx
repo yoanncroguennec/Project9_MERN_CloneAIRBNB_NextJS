@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ComponentListResultSearch from "@/components/common/resultsSearch/ComponentListResultSearch";
 import LayoutResultsSearch from "@/components/layouts/LayoutResultsSearch";
+import { BaseURL_API_Local } from "@/utils/api/baseURL_API";
 
 ////////////////////// EXPORT FUNCTION //////////////////////
 export default function ResultsSearchBtnBeInspired() {
@@ -16,7 +17,7 @@ export default function ResultsSearchBtnBeInspired() {
     const fetchData = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:3000/api/hosts?sort=${
+          `${BaseURL_API_Local}/hosts?sort=${
             sortPrice ? "price-desc" : "price-asc"
           }`
         );

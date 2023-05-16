@@ -13,6 +13,7 @@ import { useRouter } from "next/router";
 import Filters from "../../../components/common/resultsSearch/Filters";
 import ComponentListResultSearch from "@/components/common/resultsSearch/ComponentListResultSearch";
 import LayoutResultsSearch from "@/components/layouts/LayoutResultsSearch";
+import { BaseURL_API_Local } from "@/utils/api/baseURL_API";
 
 ////////////////////// EXPORT FUNCTION //////////////////////
 export default function ResultsSearchByCity() {
@@ -100,7 +101,7 @@ export default function ResultsSearchByCity() {
     const fetchData = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:3000/api/hosts?nameCity=${nameCity}&page=${counterPage}&priceMin=${
+          `${BaseURL_API_Local}/hosts?nameCity=${nameCity}&page=${counterPage}&priceMin=${
             value[0]
           }&priceMax=${value[1]}&sort=${sortPrice ? "price-desc" : "price-asc"}`
           // `http://localhost:3000/api/hosts?nameCity=${nameCity}&page=${counterPage}&priceMin=${
