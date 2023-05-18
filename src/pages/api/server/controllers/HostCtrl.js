@@ -63,6 +63,12 @@ export async function getAllHosts(req, res) {
 }
 
 // get : http://localhost:3000/api/hosts/1
+// export async function getHost(req, res) {
+//   const host = await Host.findById(req.query.id);
+//   res.send(host);
+// }
+
+
 export async function getHost(req, res) {
   try {
     const { hostId } = req.query;

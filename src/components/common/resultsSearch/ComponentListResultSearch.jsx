@@ -7,6 +7,7 @@ import {
 } from "@mui/material";
 // NEXT
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/router";
 // ICONS
 import { AiFillStar } from "react-icons/ai";
@@ -83,59 +84,64 @@ export default function ComponentListResultSearch({ destructuringOfHosts }) {
   } = destructuringOfHosts;
 
   const router = useRouter();
-  function searchItem() {
-    router.push({
-      pathname: "../searchItem",
-      query: {
-        _id: _id,
-      },
-    });
-  }
+  // function searchItem() {
+  //   router.push({
+  //     pathname: "../searchItem",
+  //     query: {
+  //       _id: _id,
+  //     },
+  //   });
+  // }
 
   return (
-    <Item onClick={searchItem} key={_id}>
-      <Image
-        alt=''
-        height={450}
-        src={photos[0]}
-        style={styleImgHost}
-        width={450}
-      />
-      <BoxDescItem>
-        <div>
-          <Typography variant={matches ? "h6" : "h6"}>{title}</Typography>
-          <Typography variant={matches ? "h6" : "h6"}>
-            {city} , {country}
-          </Typography>
-          <Typography variant='h6'>{price} € par nuit</Typography>
-        </div>
-        <div>
-          <BoxStarItem>
-            <Typography variant='h6'>{star}</Typography>
-            <AiFillStar size={matches ? 25 : 45} />
-          </BoxStarItem>
-          <BoxInfoUserHost>
-            <Image
-              alt=''
-              height={80}
-              src={imgUserHost}
-              style={styleImgUserHost}
-              width={80}
-            />
-            <Typography variant='h5'>{nameUserHost}</Typography>
-          </BoxInfoUserHost>
-          {(professional === true && (
-            <div>
-              <Typography variant='h6'>Professional</Typography>
-            </div>
-          )) ||
-            (professional === false && (
+    <Link href={`/resultsSearch/${_id}`}>
+      <Item
+        //onClick={searchItem}
+        key={_id}
+      >
+        <Image
+          alt=''
+          height={450}
+          src={photos[0]}
+          style={styleImgHost}
+          width={450}
+        />
+        <BoxDescItem>
+          <div>
+            <Typography variant={matches ? "h6" : "h6"}>{title}</Typography>
+            <Typography variant={matches ? "h6" : "h6"}>
+              {city} , {country}
+            </Typography>
+            <Typography variant='h6'>{price} € par nuit</Typography>
+          </div>
+          <div>
+            <BoxStarItem>
+              <Typography variant='h6'>{star}</Typography>
+              <AiFillStar size={matches ? 25 : 45} />
+            </BoxStarItem>
+            <BoxInfoUserHost>
+              <Image
+                alt=''
+                height={80}
+                src={imgUserHost}
+                style={styleImgUserHost}
+                width={80}
+              />
+              <Typography variant='h5'>{nameUserHost}</Typography>
+            </BoxInfoUserHost>
+            {(professional === true && (
               <div>
-                <Typography variant='h6'>Particulier</Typography>
+                <Typography variant='h6'>Professional</Typography>
               </div>
-            ))}
-        </div>
-      </BoxDescItem>
-    </Item>
+            )) ||
+              (professional === false && (
+                <div>
+                  <Typography variant='h6'>Particulier</Typography>
+                </div>
+              ))}
+          </div>
+        </BoxDescItem>
+      </Item>
+    </Link>
   );
 }
