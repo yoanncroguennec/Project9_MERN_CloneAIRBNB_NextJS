@@ -13,7 +13,7 @@ export async function getServerSideProps(context) {
   const { id } = context.query;
 console.log(id);
   const request = await fetch(
-    `http://localhost:3000/api/hosts/${id}`
+    `https://project9-mern-clone-airbnb-next-js.vercel.app/api/hosts/${id}`
   ).then((response) => response.json());
 
   return {
