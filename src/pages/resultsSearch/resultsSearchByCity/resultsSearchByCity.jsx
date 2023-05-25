@@ -12,7 +12,10 @@ import { format } from "date-fns";
 import { useRouter } from "next/router";
 import ComponentListResultSearch from "@/components/common/resultsSearch/ComponentListResultSearch";
 import LayoutResultsSearch from "@/components/layouts/LayoutResultsSearch";
-import { BaseURL_API_Local, BaseURL_API_Website } from "@/utils/api/baseURL_API";
+import {
+  BaseURL_API_Local,
+  BaseURL_API_Website,
+} from "@/utils/api/baseURL_API";
 
 ////////////////////// EXPORT FUNCTION //////////////////////
 export default function ResultsSearchByCity() {
@@ -58,11 +61,6 @@ export default function ResultsSearchByCity() {
   const start = new Date("2023-05-30");
   const end = new Date(Date.now());
 
-  // function jj(start, end) {
-  //   const rr = Math.ceil((Math.abs(start - end) / 1000) * 60 * 60 * 24);
-  //   console.log(rr);
-  // }
-
   function jj(start, end) {
     const rr = Math.ceil((Math.abs(end - start) / 1000) * 60 * 60 * 24);
     console.log(rr);
@@ -86,10 +84,6 @@ export default function ResultsSearchByCity() {
   // Month/Day/Year
   console.log(getNumberOfDays("12/11/2023", "12/30/2023"));
 
-  // function jj(startDate, endDate) {
-  //   const rr = Math.ceil(Math.abs(startDate - endDate) / 1000 * 60 * 60 * 24 )
-  //   console.log(rr);
-  // }
   ////////////////////// FORMAT DATE //////////////////////
   const formattedStartDate =
     startDate && format(new Date(startDate), "dd MMMM yy");
@@ -139,14 +133,12 @@ export default function ResultsSearchByCity() {
       titlePage={nameCity}
       range={range}
     >
-        {data?.map((destructuringOfHosts, index) => (
-          <div style={{ background: "" }}>
-            <ComponentListResultSearch
-              destructuringOfHosts={destructuringOfHosts}
-              key={index}
-            />
-          </div>
-        ))}
+      {data?.map((destructuringOfHosts, index) => (
+        <ComponentListResultSearch
+          destructuringOfHosts={destructuringOfHosts}
+          key={index}
+        />
+      ))}
     </LayoutResultsSearch>
   );
 }

@@ -2,7 +2,7 @@ import db from "../server/config/db";
 import Host from "../server/models/Host";
 
 
-export default async (req, res) => {
+export default async function handler (req, res) {
     await db.connect();
 
   const {

@@ -12,7 +12,6 @@ import { useRouter } from "next/router";
 // ICONS
 import { AiFillStar } from "react-icons/ai";
 
-
 export default function ComponentListResultSearch({ destructuringOfHosts }) {
   ////////////////////// RESPONSIVE //////////////////////
   const theme = useTheme();
@@ -123,7 +122,7 @@ export default function ComponentListResultSearch({ destructuringOfHosts }) {
               {price} € par nuit
             </Typography>
           </div>
-          <div style={{ alignItems: "center",  background: "", width: "30%" }}>
+          <div style={{ alignItems: "center", background: "", width: "30%" }}>
             <BoxStarItem>
               <Typography variant={matches ? "" : "h6"}>{star}</Typography>
               <AiFillStar size={matches ? 20 : 45} />
