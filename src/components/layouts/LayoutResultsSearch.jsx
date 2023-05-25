@@ -22,12 +22,13 @@ export default function LayoutResultsSearch({
     fontWeight: "bold",
     margin: "5px 0",
     textAlign: "center",
+    [theme.breakpoints.down("sm")]: {},
+    margin: "1px 0",
   }));
 
   const BoxLayoutResultsSearch = styled(Box)(({ theme }) => ({
     display: "grid",
     gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
-    margin: "0 50px",
     [theme.breakpoints.down("sm")]: {
       margin: "0 10px",
       gridTemplateColumns: "repeat(1, minmax(0, 1fr))",

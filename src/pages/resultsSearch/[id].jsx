@@ -4,22 +4,30 @@ import React from 'react'
 
 export default function ProductScreen({ host, id }) {
   console.log(id);
- console.log(host);
-  return <div>{host.city}</div>;
+  console.log(host);
+//   return <div>{host.city}</div>;
 }
 
-export async function getServerSideProps(context) {
-  //   const { params } = context;
-  const { id } = context.query;
-console.log(id);
-  const request = await fetch(
-    `https://project9-mern-clone-airbnb-next-js.vercel.app/api/hosts/${id}`
-  ).then((response) => response.json());
+export async function getServerSideProps({ query: { id } }) {
+//   const res = await fetch(`https://testcrud-xi.vercel.app/api/tasks/${id}`);
+  const res = await fetch(`http://localhost:3000/api/hosts/${id}`);
+
+  if (res.status === 200) {
+    const host = await res.json();
+
+    return {
+      props: {
+        host,
+      },
+    };
+  }
 
   return {
     props: {
-      id: id,
-      host: request,
+      error: {
+        statusCode: res.status,
+        statusText: "Invalid Id",
+      },
     },
   };
 }

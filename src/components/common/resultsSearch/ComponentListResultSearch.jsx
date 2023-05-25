@@ -13,8 +13,6 @@ import { useRouter } from "next/router";
 import { AiFillStar } from "react-icons/ai";
 
 
-
-
 export default function ComponentListResultSearch({ destructuringOfHosts }) {
   ////////////////////// RESPONSIVE //////////////////////
   const theme = useTheme();
@@ -23,28 +21,38 @@ export default function ComponentListResultSearch({ destructuringOfHosts }) {
   ////////////////////// STYLES //////////////////////
   const Item = styled(Box)(({ theme }) => ({
     alignItems: "center",
+    background: "",
     display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-between",
-    margin: "50px",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    margin: "0 auto",
+    marginBottom: "55px",
     width: "450px",
     [theme.breakpoints.down("sm")]: {
-      width: "350px",
+      flexDirection: "column",
+      marginBottom: "30px",
+      width: "380px",
     },
   }));
+
+  const linkItem = {
+    color: "#000",
+    textDecoration: "none",
+  };
 
   const styleImgHost = {
     borderRadius: "25px",
     height: `${matches ? "250px" : "450px"}`,
-    width: `${matches ? "250px" : "450px"}`,
+    width: `${matches ? "380px" : "450px"}`,
   };
 
   const BoxDescItem = styled(Box)(({ theme }) => ({
+    background: "",
     display: "flex",
     flexWrap: "nowrap",
     justifyContent: "space-between",
     [theme.breakpoints.down("sm")]: {
-      flexDirection: "column",
+      // flexDirection: "column",
     },
   }));
 
@@ -61,7 +69,7 @@ export default function ComponentListResultSearch({ destructuringOfHosts }) {
   const BoxInfoUserHost = styled(Box)(({ theme }) => ({
     alignItems: "center",
     display: "flex",
-    flexWrap: "nowrap",
+    flexWrap: "wrap",
   }));
 
   const styleImgUserHost = {
@@ -94,11 +102,10 @@ export default function ComponentListResultSearch({ destructuringOfHosts }) {
   // }
 
   return (
-    <Link href={`/resultsSearch/${_id}`}>
-      <Item
-        //onClick={searchItem}
-        key={_id}
-      >
+    <Item
+    // onClick={searchItem}
+    >
+      <Link href={`/resultsSearch/${_id}`} key={_id} style={linkItem}>
         <Image
           alt=''
           height={450}
@@ -107,17 +114,19 @@ export default function ComponentListResultSearch({ destructuringOfHosts }) {
           width={450}
         />
         <BoxDescItem>
-          <div>
+          <div style={{ background: "", width: "70%" }}>
             <Typography variant={matches ? "h6" : "h6"}>{title}</Typography>
-            <Typography variant={matches ? "h6" : "h6"}>
+            <Typography variant={matches ? "" : "h6"}>
               {city} , {country}
             </Typography>
-            <Typography variant='h6'>{price} € par nuit</Typography>
+            <Typography variant={matches ? "" : "h6"}>
+              {price} € par nuit
+            </Typography>
           </div>
-          <div>
+          <div style={{ alignItems: "center",  background: "", width: "30%" }}>
             <BoxStarItem>
-              <Typography variant='h6'>{star}</Typography>
-              <AiFillStar size={matches ? 25 : 45} />
+              <Typography variant={matches ? "" : "h6"}>{star}</Typography>
+              <AiFillStar size={matches ? 20 : 45} />
             </BoxStarItem>
             <BoxInfoUserHost>
               <Image
@@ -127,21 +136,27 @@ export default function ComponentListResultSearch({ destructuringOfHosts }) {
                 style={styleImgUserHost}
                 width={80}
               />
-              <Typography variant='h5'>{nameUserHost}</Typography>
+              <Typography variant={matches ? "" : "h6"}>
+                {nameUserHost}
+              </Typography>
             </BoxInfoUserHost>
             {(professional === true && (
               <div>
-                <Typography variant='h6'>Professional</Typography>
+                <Typography variant={matches ? "" : "h6"}>
+                  Professional
+                </Typography>
               </div>
             )) ||
               (professional === false && (
                 <div>
-                  <Typography variant='h6'>Particulier</Typography>
+                  <Typography variant={matches ? "" : "h6"}>
+                    Particulier
+                  </Typography>
                 </div>
               ))}
           </div>
         </BoxDescItem>
-      </Item>
-    </Link>
+      </Link>
+    </Item>
   );
 }

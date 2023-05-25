@@ -10,7 +10,6 @@ import {
 import { format } from "date-fns";
 // NEXT
 import { useRouter } from "next/router";
-import Filters from "../../../components/common/resultsSearch/Filters";
 import ComponentListResultSearch from "@/components/common/resultsSearch/ComponentListResultSearch";
 import LayoutResultsSearch from "@/components/layouts/LayoutResultsSearch";
 import { BaseURL_API_Local, BaseURL_API_Website } from "@/utils/api/baseURL_API";
@@ -140,13 +139,14 @@ export default function ResultsSearchByCity() {
       titlePage={nameCity}
       range={range}
     >
-      {/* <button onClick={getNumberOfDays}>kkkkkkkkk</button> */}
-      {data?.map((destructuringOfHosts, index) => (
-        <ComponentListResultSearch
-          destructuringOfHosts={destructuringOfHosts}
-          key={index}
-        />
-      ))}
+        {data?.map((destructuringOfHosts, index) => (
+          <div style={{ background: "" }}>
+            <ComponentListResultSearch
+              destructuringOfHosts={destructuringOfHosts}
+              key={index}
+            />
+          </div>
+        ))}
     </LayoutResultsSearch>
   );
 }
