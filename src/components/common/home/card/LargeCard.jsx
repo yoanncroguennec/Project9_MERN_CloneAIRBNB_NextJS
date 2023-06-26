@@ -83,7 +83,7 @@ export default function LargeCard() {
           alt='largeCard'
           layout='fill'
           objectFit='cover'
-          src='/assets/imgs/components/common/largeCard/imgLargeCard.jpg'
+          src='https://res.cloudinary.com/dky2vpnyr/image/upload/v1687778913/project8_clone_airbnb_nextjs_mongodb/Others%20photos%20Airbnb/imgLargeCard_qoneem.jpg'
           style={{
             borderRadius: "15px",
           }}
