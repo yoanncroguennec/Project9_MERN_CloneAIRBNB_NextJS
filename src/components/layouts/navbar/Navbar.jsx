@@ -189,7 +189,12 @@ export default function Navbar({ placeholder }) {
       {/* LEFT */}
       <BoxLeftNavbar onClick={() => router.push("/")}>
         <BoxImgLogo>
-          <Image alt='logo airbnb' height={50} src='/airbnb.png' width={180} />
+          <Image
+            alt='logo airbnb'
+            height={50}
+            src='https://res.cloudinary.com/dky2vpnyr/image/upload/v1687778897/project8_clone_airbnb_nextjs_mongodb/Others%20photos%20Airbnb/logoAirbnb_whf9hu.png'
+            width={180}
+          />
         </BoxImgLogo>
 
         {/* <BoxTicker>
