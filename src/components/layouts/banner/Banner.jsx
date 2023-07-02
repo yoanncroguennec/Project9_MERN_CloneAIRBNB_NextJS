@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 // NEXT
 import Image from "next/image";
-
+import { useRouter } from "next/router";
 
 ////////////////////// FUNCTION REACT //////////////////////
 export default function Banner() {
@@ -54,6 +54,13 @@ export default function Banner() {
     },
   }));
 
+  ////////////////////// JS //////////////////////
+
+    // Redirection BTN
+  const router = useRouter();
+  function RedirectionBtnGlobeSearchAllHosts() {
+    router.push({pathname: "./resultsSearch/resultsSearchAllHosts/resultsSearchAllHosts"});
+  }
   ////////////////////// RETURN //////////////////////
   return (
     <RootBanner>
@@ -67,7 +74,7 @@ export default function Banner() {
         <TypoTitle variant={matches ? "h5" : "h3"}>
           Vous ne savez pas où aller ? Parfait.
         </TypoTitle>
-        <Btn_I_M_Flexible>Je suis flexible</Btn_I_M_Flexible>
+        <Btn_I_M_Flexible onClick={RedirectionBtnGlobeSearchAllHosts}>Je suis flexible</Btn_I_M_Flexible>
       </BoxBanner>
     </RootBanner>
   );

@@ -8,10 +8,14 @@ import {
   styled,
 } from "@mui/material";
 import { format } from "date-fns";
-// NEXT
-import { useRouter } from "next/router";
+// COMMONS
 import ComponentListResultSearch from "@/components/common/resultsSearch/ComponentListResultSearch";
+// LAYOUTS
 import LayoutResultsSearch from "@/components/layouts/LayoutResultsSearch";
+// NEXT
+import Link from "next/link";
+import { useRouter } from "next/router";
+// UTILS API
 import {
   BaseURL_API_Local,
   BaseURL_API_Website,
@@ -24,21 +28,35 @@ export default function ResultsSearchByCity() {
   const matches = useMediaQuery(theme.breakpoints.down("md"));
 
   ////////////////////// STYLES //////////////////////
-  const RootListSearch = styled(Box)(({ theme }) => ({
+  const RootNoAccommodation = styled(Box)(({ theme }) => ({
+    alignItems: "center",
     display: "flex",
     flexDirection: "column",
+    justifyContent: "center",
+    marginTop: "150px",
     [theme.breakpoints.down("sm")]: {},
   }));
 
-  const BoxListSearch = styled(Box)(({ theme }) => ({
-    display: "grid",
-    gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
-    margin: "0 250px",
-    [theme.breakpoints.down("sm")]: {
-      margin: "0 10px",
-      gridTemplateColumns: "repeat(1, minmax(0, 1fr))",
-    },
-  }));
+  const stylesLink = {
+    color: "#000",
+    textDecoration: "none",
+  };
+
+  // const RootListSearch = styled(Box)(({ theme }) => ({
+  //   display: "flex",
+  //   flexDirection: "column",
+  //   [theme.breakpoints.down("sm")]: {},
+  // }));
+
+  // const BoxListSearch = styled(Box)(({ theme }) => ({
+  //   display: "grid",
+  //   gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+  //   margin: "0 250px",
+  //   [theme.breakpoints.down("sm")]: {
+  //     margin: "0 10px",
+  //     gridTemplateColumns: "repeat(1, minmax(0, 1fr))",
+  //   },
+  // }));
 
   // States Utilies
   const [fetchRangeValues, setFetchRangeValues] = useState([0, 200]);
@@ -120,7 +138,12 @@ export default function ResultsSearchByCity() {
   if (data?.length === 0) {
     return (
       <LayoutResultsSearch>
-        <Typography variant='h3'>Pas d&apos;hébergements</Typography>
+        <RootNoAccommodation>
+          <Typography variant='h3'>Pas d&apos;hébergements</Typography>
+          <Link href='/' style={stylesLink}>
+            <Typography variant='h6'>Retour à l&apos;accueil</Typography>
+          </Link>
+        </RootNoAccommodation>
       </LayoutResultsSearch>
     );
   }

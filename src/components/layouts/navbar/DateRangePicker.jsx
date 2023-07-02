@@ -63,6 +63,7 @@ export default function DateRangePicker({ searchInput, setSearchInput }) {
       // !!! ATTENTION !!! NE PAS METTRE CE STYLE DANS UNE BALISE MUI CAR APRES LE "SÉLÉCTION RANGE" MARCHE PLUS DONC LE DÉFINIR DIRECTEMENT DANS UNE BALISE DIV.
       <div
         style={{
+          background: "#FFF",
           display: "flex",
           flexDirection: "column",
           gridColumn: "span 3 / span 3",

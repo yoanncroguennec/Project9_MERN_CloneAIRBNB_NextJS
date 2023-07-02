@@ -14,6 +14,7 @@ import DateRangePicker from "./DateRangePicker";
 // NEXT
 import Image from "next/image";
 // import Link from "next/link";
+import { useRouter } from "next/router";
 // COMPONENTS
 import Auth from "@/components/common/auth/Auth";
 // FUNCTIONS
@@ -26,7 +27,6 @@ import {
   AiOutlineLogout,
 } from "react-icons/ai";
 import { BsGlobe } from "react-icons/bs";
-import { useRouter } from "next/router";
 
 ////////////////////// STYLES //////////////////////
 const RootNavbar = styled(Box)(({ theme }) => ({
@@ -243,16 +243,17 @@ export default function Navbar({ placeholder }) {
         <BsGlobe
           onClick={RedirectionBtnGlobeSearchAllHosts}
           size={30}
-          style={{ cursor: "pointer" }}
+          style={{ cursor: "pointer", marginRight: "70px" }}
         />
-        <BoxIcons_GlobeAndUser>
-          {/* <AiOutlineMenu size={30} /> */}
+        {/* <BoxIcons_GlobeAndUser>
           {userState ? (
-            <AiOutlineLogout onClick={logoutHandler} size={30} />
+            <AiOutlineLogout
+              // onClick={logoutHandler}
+              size={30} />
           ) : (
             <Auth />
           )}
-        </BoxIcons_GlobeAndUser>
+        </BoxIcons_GlobeAndUser> */}
       </BoxRightNavbar>
 
       {/*************************************************************/}

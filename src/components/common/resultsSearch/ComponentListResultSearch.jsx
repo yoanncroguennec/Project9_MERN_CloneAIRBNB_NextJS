@@ -20,7 +20,6 @@ export default function ComponentListResultSearch({ destructuringOfHosts }) {
   ////////////////////// STYLES //////////////////////
   const Item = styled(Box)(({ theme }) => ({
     alignItems: "center",
-    background: "",
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "center",
@@ -104,7 +103,7 @@ export default function ComponentListResultSearch({ destructuringOfHosts }) {
     <Item
     // onClick={searchItem}
     >
-      <Link href={`/resultsSearch/${_id}`} key={_id} style={linkItem}>
+      {/* <Link href={`/resultsSearch/${_id}`} key={_id} style={linkItem}> */}
         <Image
           alt=''
           height={450}
@@ -155,7 +154,7 @@ export default function ComponentListResultSearch({ destructuringOfHosts }) {
               ))}
           </div>
         </BoxDescItem>
-      </Link>
+      {/* </Link> */}
     </Item>
   );
 }
