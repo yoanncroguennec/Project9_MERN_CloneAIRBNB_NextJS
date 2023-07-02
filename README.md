@@ -3,8 +3,8 @@ Je vous présente mon travail qui est un clone de AirBNB, avec un CRUD, coté Lo
 
 
 
-Informations :
-Name BDD : "Project9_MERN_AIRBNB_NextJS"
+Informations :<br/>
+Name BDD : "Project9_MERN_AIRBNB_NextJS"<br/>
 Link Vercel : "https://project9-mern-clone-airbnb-next-js.vercel.app/"
 Link Github : "https://github1s.com/yoanncroguennec/Project9_MERN_CloneAIRBNB_NextJS"
 
