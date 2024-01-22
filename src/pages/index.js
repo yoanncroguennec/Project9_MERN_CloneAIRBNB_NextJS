@@ -1,16 +1,3 @@
-// INDEX
-// APP
-
-// LAYOUT
-// BANNER
-// NAVBAR
-// FOOTER
-// Geolocation_API
-
-// ProposedListOfCities
-// ListCategories
-
-
 import { Box, Container, styled } from "@mui/material";
 // COMMONS
 import { LargeCard, ListCategories, ProposedListOfCities } from "../components/common";

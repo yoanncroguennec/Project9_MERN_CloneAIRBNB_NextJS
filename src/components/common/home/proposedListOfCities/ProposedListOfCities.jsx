@@ -59,7 +59,7 @@ export default function ProposedListOfCities() {
         style={{ fontWeight: "bold" }}
         variant={matches ? "h5" : "h3"}
       >
-        Explorer les environs
+        Explorer les environs près de vous
       </Typography>
       <BoxListExploreData>
         {dataExploreCity?.map(({ img, location, distance }) => (
