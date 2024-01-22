@@ -10,8 +10,7 @@ module.exports = {
       "lh3.googleusercontent.com",
       "links.papareact.com",
       "res.cloudinary.com",
-      "unsplash.com/fr",
-      "https://www.pexels.com/fr-fr/",
+      "images.pexels.com",
     ],
   },
 };
