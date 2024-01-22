@@ -1,8 +1,14 @@
-import { Button, Typography, Box, styled, useTheme, useMediaQuery } from '@mui/material';
+import {
+  Button,
+  Typography,
+  Box,
+  styled,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
 // NEXT
-import Image from 'next/image';
-import { useRouter } from 'next/router';
-
+import Image from "next/image";
+import { useRouter } from "next/router";
 
 ////////////////////// FUNCTION REACT //////////////////////
 export default function LargeCard() {
@@ -83,7 +89,7 @@ export default function LargeCard() {
           alt='largeCard'
           layout='fill'
           objectFit='cover'
-          src='https://res.cloudinary.com/dky2vpnyr/image/upload/v1687778913/project8_clone_airbnb_nextjs_mongodb/Others%20photos%20Airbnb/imgLargeCard_qoneem.jpg'
+          src='/assets/imgs/components/common/home/largeCard/imgLargeCard.jpg'
           style={{
             borderRadius: "15px",
           }}

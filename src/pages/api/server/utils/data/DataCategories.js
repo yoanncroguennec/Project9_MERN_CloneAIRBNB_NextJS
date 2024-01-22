@@ -2,7 +2,7 @@ export const dataCategories = {
   categories: [
     {
       urlTypeCategory: "in_city",
-      typeCategory: "En ville",
+      // typeCategory: "En ville",
       imgCategory:
         "https://res.cloudinary.com/dky2vpnyr/image/upload/v1683988464/project8_clone_airbnb_nextjs_mongodb/categories/View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu_r3efsc.jpg",
     },

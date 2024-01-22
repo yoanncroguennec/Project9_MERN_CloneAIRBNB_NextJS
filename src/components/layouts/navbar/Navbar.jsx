@@ -192,7 +192,7 @@ export default function Navbar({ placeholder }) {
           <Image
             alt='logo airbnb'
             height={50}
-            src='https://res.cloudinary.com/dky2vpnyr/image/upload/v1687778897/project8_clone_airbnb_nextjs_mongodb/Others%20photos%20Airbnb/logoAirbnb_whf9hu.png'
+            src='/assets/imgs/components/layouts/navbar/logoAirbnb.png'
             width={180}
           />
         </BoxImgLogo>

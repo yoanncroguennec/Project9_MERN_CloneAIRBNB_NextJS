@@ -66,7 +66,7 @@ export default function Banner() {
     <RootBanner>
       <Image
         alt='banner'
-        src='https://res.cloudinary.com/dky2vpnyr/image/upload/v1687778907/project8_clone_airbnb_nextjs_mongodb/Others%20photos%20Airbnb/bgBanner1_hdmwga.jpg'
+        src="/assets/imgs/components/layouts/banner/bgBanner1.jpg"
         layout='fill'
         objectFit='cover'
       />
