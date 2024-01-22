@@ -39,7 +39,9 @@ export default function ResultsSearchAllHosts() {
 
   ////////////////////// RETURN //////////////////////
   return loading ? (
-    <h1>Chargement ...</h1>
+    <div style={{ alignItems: "center", display: "flex", justifyContent: "center" }}>
+      <h1>Chargement ...</h1>
+    </div>
   ) : (
     <LayoutResultsSearch
       noOfGuests={noOfGuests}

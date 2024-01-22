@@ -39,7 +39,17 @@ export default function ResultsSearchByCategory() {
 
   const noOfGuests = undefined;
 
-  return (
+  return loading ? (
+    <div
+      style={{
+        alignItems: "center",
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
+      <h1>Chargement ...</h1>
+    </div>
+  ) : (
     <LayoutResultsSearch
       noOfGuests={noOfGuests}
       setSortPrice={setSortPrice}

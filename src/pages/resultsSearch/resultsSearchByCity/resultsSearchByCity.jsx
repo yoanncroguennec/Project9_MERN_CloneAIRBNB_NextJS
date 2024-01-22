@@ -148,7 +148,17 @@ export default function ResultsSearchByCity() {
     );
   }
 
-  return (
+  return loading ? (
+    <div
+      style={{
+        alignItems: "center",
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
+      <h1>Chargement ...</h1>
+    </div>
+  ) : (
     <LayoutResultsSearch
       noOfGuests={noOfGuests}
       setSortPrice={setSortPrice}
