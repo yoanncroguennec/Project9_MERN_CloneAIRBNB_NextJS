@@ -2,7 +2,10 @@ import ComponentListResultSearch from "@/components/common/resultsSearch/Compone
 import LayoutResultsSearch from "@/components/layouts/LayoutResultsSearch";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { BaseURL_API_Local, BaseURL_API_Website } from "@/utils/api/baseURL_API";
+import {
+  BaseURL_API_Local,
+  BaseURL_API_Website,
+} from "@/utils/api/baseURL_API";
 
 export default function ResultsSearchAllHosts() {
   // States Utilies
@@ -35,7 +38,9 @@ export default function ResultsSearchAllHosts() {
   const titlePage = "TOUS LES HÔTES DE AIRBNB";
 
   ////////////////////// RETURN //////////////////////
-  return (
+  return loading ? (
+    <h1>Chargement ...</h1>
+  ) : (
     <LayoutResultsSearch
       noOfGuests={noOfGuests}
       setSortPrice={setSortPrice}
